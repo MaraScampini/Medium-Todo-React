@@ -10,4 +10,5 @@ test('it should render App', () => {
   const title = screen.getByText('React Todo App')
 
   expect(title).toBeInTheDocument()
+
 })

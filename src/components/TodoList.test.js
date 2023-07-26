@@ -14,7 +14,7 @@ beforeEach(()=>render(<TodoList list={list} remove={remove} />));
 test("it should render a list of tasks", () => {
   const taskList = screen.getAllByRole("listitem");
 
-  expect(taskList).toHaveLength(2);
+  expect(taskList).toHaveLength(list.length);
 });
 
 test("the button should execute a function", async () => {
