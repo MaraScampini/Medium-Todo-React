@@ -1,17 +1,14 @@
-import React from 'react'
+import React from "react";
 
-export const TodoList = ({list, remove}) => {
+export const TodoList = ({ list, remove }) => {
   return (
     <>
       {list?.length > 0 ? (
         <ul className="todo-list">
           {list.map((todo, index) => (
-            <div className="todo">
-              <li key={index}>{todo}</li>
-              <button
-                className="delete-button"
-                onClick={() => remove(todo)}
-              >
+            <div key={index} className="todo">
+              <li>{todo}</li>
+              <button className="delete-button" onClick={() => remove(todo)}>
                 Delete
               </button>
             </div>
@@ -24,4 +21,4 @@ export const TodoList = ({list, remove}) => {
       )}{" "}
     </>
   );
-}
+};
